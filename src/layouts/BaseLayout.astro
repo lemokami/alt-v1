@@ -1,0 +1,25 @@
+---
+
+---
+
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <title>Jesswin W Varghese</title>
+  </head>
+  <body
+    class='bg-[#FDF8F2] max-w-[1050px] mx-auto flex flex-col justify-center h-screen font-satoshi font-normal antialiased px-8'
+  >
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('/fonts/Satoshi-Variable.ttf') format('ttf');
+    font-display: swap;
+  }
+</style>

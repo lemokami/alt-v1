@@ -1,0 +1,120 @@
+---
+const experiences: {
+  title: string;
+  company: string;
+  logo: string;
+  period: string;
+}[] = [
+  {
+    title: 'Product Engineer',
+    company: 'Hoomans',
+    logo: '/public/images/hoomans.png',
+    period: '2022 - Present',
+  },
+  {
+    title: 'Freelance Web Developer',
+    company: 'Fiverr, Upwork & Referrals',
+    logo: '/public/images/referrals.gif',
+    period: '2021 - 2022',
+  },
+];
+
+const projects: {
+  title: string;
+  tech: string[];
+  logo: string;
+  link: string;
+}[] = [
+  {
+    title: 'CelebrationsBot',
+    tech: ['Node.js', 'Boltjs', 'Postgres', 'Nextjs', 'Tailwindcss'],
+    logo: '/public/images/celebrations.png',
+    link: 'https://celebrationsbot.com',
+  },
+  {
+    title: 'StartupsOfKerala',
+    tech: ['Astro', 'Tailwindcss', 'Supabase'],
+    logo: '/public/images/startupsofkerala.png',
+    link: 'https://startupsofkerala.com',
+  },
+];
+---
+
+<div class='flex flex-wrap gap-[7rem] mt-16'>
+  <div class='flex flex-col flex-1'>
+    <h2 class='font-medium leading-[135.3%] tracking-[3%]'>Experience</h2>
+    <span class='bg-[#F56453] rounded-full h-[0.125rem] w-4 mt-[0.19rem]'
+    ></span>
+    <div class='flex flex-col mt-4 gap-[1.12rem]'>
+      {
+        experiences.map((experience, index) => (
+          <>
+            <div class='flex items-center gap-4'>
+              <div class='rounded-xl w-16 overflow-hidden'>
+                <img
+                  src={experience.logo}
+                  alt={'logo of ' + experience.company}
+                  class='w-16 object-cover'
+                />
+              </div>
+              <div class='flex justify-between items-center w-full'>
+                <div class='flex flex-col gap-1'>
+                  <span class='font-medium leading-[135.3%] tracking-[3%]'>
+                    {experience.company}
+                  </span>
+                  <span class='text-sm leading-[135.3%] tracking-[3%]'>
+                    {experience.title}
+                  </span>
+                </div>
+                <span class='text-sm leading-[135.3%] tracking-[3%]'>
+                  {experience.period}
+                </span>
+              </div>
+            </div>
+            {index < experiences.length - 1 && (
+              <div class='h-[0.0625rem] w-full bg-black/10 rounded-full' />
+            )}
+          </>
+        ))
+      }
+    </div>
+  </div>
+
+  <!-- projects section  -->
+  <div class='flex flex-col flex-1'>
+    <h2 class='font-medium leading-[135.3%] tracking-[3%]'>Worked on</h2>
+    <span class='bg-[#F56453] rounded-full h-[0.125rem] w-4 mt-[0.19rem]'
+    ></span>
+    <div class='flex flex-col mt-4 gap-[1.12rem]'>
+      {
+        projects.map((project, index) => (
+          <>
+            <div class='flex items-center gap-4'>
+              <div class='rounded-xl h-[3.8rem] w-[3.8rem] overflow-hidden'>
+                <img src={project.logo} alt={'logo of ' + project.title} />
+              </div>
+              <div class='flex justify-between items-center w-full'>
+                <div class='flex flex-col gap-1'>
+                  <span class='font-medium leading-[135.3%] tracking-[3%]'>
+                    {project.title}
+                  </span>
+                  <span class='text-sm leading-[135.3%] tracking-[3%]'>
+                    {project.tech.join(', ')}
+                  </span>
+                </div>
+                <a
+                  href={project.link}
+                  class='rounded-full px-4 py-2 font-[600] tracking-[3%] text-xs bg-[#FFE8CC] text-[#F56453] transition-colors border border-transparent hover:border-[#F56453]'>
+                  View
+                </a>
+              </div>
+            </div>
+            {index < projects.length - 1 && (
+              <div class='h-[0.0625rem] w-full bg-black/10 rounded-full' />
+            )}
+          </>
+        ))
+      }
+    </div>
+  </div>
+</div>
