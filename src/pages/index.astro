@@ -22,4 +22,19 @@ import ShowCase from '../sections/Showcase.astro';
     🌴Keralam, India.
   </h1>
   <ShowCase />
+
+  <footer
+    class='text-sm self-center pt-20 xl:py-8 xl:pb-16 xl:absolute bottom-2 inset-x-0 text-center'
+  >
+    Hey Let’s connect on <a href='https://github.com/lemokami'>Github</a>,
+    <a href='https://linkedin.com/in/jesswin'>Linkedin</a> or via <a
+      href='mailto:jesz@duck.com'>Email</a
+    >
+  </footer>
 </BaseLayout>
+
+<style>
+  footer > a {
+    @apply font-medium text-[#F56453] underline underline-offset-4 py-2;
+  }
+</style>
