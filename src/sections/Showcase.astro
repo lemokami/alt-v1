@@ -55,6 +55,7 @@ const projects: {
                   src={experience.logo}
                   alt={'logo of ' + experience.company}
                   class='w-16 object-cover'
+                  width='64'
                 />
               </div>
               <div class='flex justify-between items-center w-full'>
@@ -91,7 +92,11 @@ const projects: {
           <>
             <div class='flex items-center gap-4'>
               <div class='rounded-xl h-[3.8rem] w-[3.8rem] overflow-hidden'>
-                <img src={project.logo} alt={'logo of ' + project.title} />
+                <img
+                  src={project.logo}
+                  alt={'logo of ' + project.title}
+                  width='64'
+                />
               </div>
               <div class='flex justify-between items-center w-full'>
                 <div class='flex flex-col gap-1'>
