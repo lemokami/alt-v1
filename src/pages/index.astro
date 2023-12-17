@@ -5,12 +5,21 @@ import ShowCase from '../sections/Showcase.astro';
 
 <BaseLayout>
   <h1
-    class='font-satoshi text-2xl md:text-4xl text-[2rem] leading-[135%] md:leading-[140%] font-[447] tracking-[0.0675rem]'
+    class='font-satoshi text-4xl text-[2rem] leading-[140%] font-[447] tracking-[0.0675rem] hidden xl:block'
+    aria-label="Jesswin's aim is to build reliable product experiences in his engineering work by focusing on smoothly integrating backends with intuitive front-ends, steadily crafting it all day-by-day from his home base in Keralam, India."
   >
     Jesswin aims to build reliable product experiences in his engineering work
     by focusing on smoothly integrating backends with intuitive front-ends,
-    steadily crafting it all day-by-day from his home base in Keralam, India.
+    steadily crafting it all day-by-day from his home base in 🌴Keralam, India.
   </h1>
 
+  <h1
+    class='font-satoshi text-2xl text-[2rem] leading-[135%] font-normal tracking-[0.0675rem] xl:hidden'
+    aria-hidden='true'
+  >
+    Jesswin builds reliable product experiences, focusing on integrating fluid
+    backends and intuitive front-ends, steadily crafted from his home base in
+    🌴Keralam, India.
+  </h1>
   <ShowCase />
 </BaseLayout>
