@@ -1,5 +1,5 @@
 ---
-
+import AnimatedGradient from '../components/AnimatedGradient.astro';
 ---
 
 <html lang='en'>
@@ -74,8 +74,9 @@
     <link rel='shortcut icon' href='/favicon/favicon.ico' type='image/x-icon' />
   </head>
   <body
-    class='bg-[#FDF8F2] max-w-[1050px] mx-auto flex flex-col justify-center min-h-screen xl:h-screen font-satoshi font-normal antialiased py-16 xl:py-auto p-8'
+    class='bg-[#121212] text-white max-w-[1050px] mx-auto flex flex-col justify-center min-h-screen xl:h-screen font-satoshi font-normal antialiased py-16 xl:py-auto p-8'
   >
+    <AnimatedGradient />
     <slot />
   </body>
 </html>
